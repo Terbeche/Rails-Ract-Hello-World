@@ -1,18 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-
 const Greeting = () => {
-  const { message } = useSelector((state) => state.messages.message);
-
-
-  return <div>{message}</div>;
+  const message = useSelector((state) => state.messages.greeting);
+  return <div className="message">{message}</div>;
 };
-
-// const Greeting = () => (
-
-//   <h1>Salam Mustapha!</h1>
-
-// );
 
 export default Greeting;

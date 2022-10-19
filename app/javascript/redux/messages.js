@@ -1,36 +1,22 @@
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const messagesAPI = 'http://127.0.0.1:3000/api/v1/messages/';
-
-const INITIAL_STATE = {
-  loading: true,
-  message: null,
-};
+const messagesAPI = 'http://localhost:3000/api/v1/messages/';
+const initialState = [];
 
 export const fetchMessage = createAsyncThunk('messages/getMessage', async () => {
   const res = await fetch(messagesAPI);
+  const data = await res.json();
 
-  return res.data.greeting;
+  return data;
 });
 
 const messagesSlice = createSlice({
   name: 'messages',
-  initialState: INITIAL_STATE,
-
+  initialState,
   extraReducers: {
-    [fetchMessage.fulfilled]: (state, action) => {
-      state.message = action.payload;
-      state.loading = false;
-    },
+    [fetchMessage.fulfilled]: (state, action) => action.payload,
 
-    [fetchMessage.pending]: (state) => {
-      state.loading = true;
-    },
-
-    [fetchMessage.rejected]: (state) => {
-      state.loading = false;
-    },
   },
 });
 

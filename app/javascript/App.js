@@ -1,28 +1,20 @@
 import React, { useEffect } from 'react';
-import { Routes, Route } from 'react-router';
-import Greeting from './Greeting';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-
-
+import Greeting from './Greeting';
+import { fetchMessage } from './redux/messages';
 
 const App = () => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    useEffect(() => dispatch(fetchMessage()), []);
+  useEffect(() => dispatch(fetchMessage()), []);
 
-   return (
-
-    <Routes>
-      <Route exact path="/" element={<Greeting />} />
-    </Routes>
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Greeting />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 export default App;
-
-// const App = () =>
-
-//   (
-
-//     <h1>Salam Mustapha!</h1>
-
-//   );
