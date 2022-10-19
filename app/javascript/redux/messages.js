@@ -8,8 +8,9 @@ const INITIAL_STATE = {
   message: null,
 };
 
-export const fetchMessage = createAsyncThunk('messages/getMessages', async () => {
+export const fetchMessage = createAsyncThunk('messages/getMessage', async () => {
   const res = await fetch(messagesAPI);
+
   return res.data.greeting;
 });
 

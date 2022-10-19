@@ -1,12 +1,10 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchMessage } from './redux/messages';
+import React from 'react';
+import { useSelector } from 'react-redux';
+
 
 const Greeting = () => {
-  const dispatch = useDispatch();
-  const { message } = useSelector((state) => state.messages);
+  const { message } = useSelector((state) => state.messages.message);
 
-  useEffect(() => dispatch(fetchMessage()), null);
 
   return <div>{message}</div>;
 };
