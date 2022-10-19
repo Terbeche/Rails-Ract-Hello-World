@@ -17,13 +17,13 @@
 To setup and install this sample AlFa Blog project, follow the below steps:
 - Clone this project by the command: 
   ```
-  git clone https://github.com/Terbeche/Rails-Ract-Hello-Wordl.git
+  git clone https://github.com/Terbeche/Rails-Ract-Hello-World.git
   ```
 
 - Then switch to the project folder by the bellow query:
 
   ```
-  cd Rails-Ract-Hello-Wordl
+  cd Rails-Ract-Hello-World
   ```
 
 - Install the required dependecies with:
@@ -67,7 +67,7 @@ To setup and install this sample AlFa Blog project, follow the below steps:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Terbeche/Rails-Ract-Hello-Wordl/issues).
+Feel free to check the [issues page](https://github.com/Terbeche/Rails-Ract-Hello-World/issues).
 
 
 ## Show your support
