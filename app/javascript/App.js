@@ -6,8 +6,7 @@ const App = () => {
   (
 
     <Routes>
-      <Route index element={<Greeting />} />
-
+      <Route exact path="/" element={<Greeting />} />
     </Routes>
 
   );

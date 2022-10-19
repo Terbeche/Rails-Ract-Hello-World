@@ -3,13 +3,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchMessage } from './redux/messages';
 
 const Greeting = () => {
-  
   const dispatch = useDispatch();
   const { message } = useSelector((state) => state.messages);
 
   useEffect(() => dispatch(fetchMessage()), null);
 
-  return <div className="message">{message}</div>;
+  return <div>{message}</div>;
 };
 
 // const Greeting = () => (
